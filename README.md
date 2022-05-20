@@ -1,6 +1,4 @@
-# Link To Hosted Assignment
-
-[URl to webApp](https://abhishek8173.github.io/fe-assignment/).
+# Link To Hosted Assignment [URl to webApp](https://abhishek8173.github.io/fe-assignment/)
 
 # Getting Started with Create React App
 
