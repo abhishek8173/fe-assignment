@@ -8,16 +8,13 @@ const Search = (props) => {
   const data=props.emp;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedUsers, setSelectedUsers] = useState({});
-  window.addEventListener('storage_from_teamlist', ()=>{
-    setInTeam(JSON.parse(window.localStorage.getItem('inTeam')));
-
-  })
   useEffect(()=>{
     const selectedUsers=JSON.parse(localStorage.getItem('selectedUsers'));
     if (selectedUsers){
       setSelectedUsers(selectedUsers);
     }
   },[]);
+  var prevTeam;
   useEffect(()=>{
     localStorage.setItem('selectedUsers', JSON.stringify(selectedUsers));
   }, [selectedUsers]);
@@ -33,7 +30,8 @@ const Search = (props) => {
       
   }
   const update_team=()=>{
-    setInTeam(prevState=>({...prevState, ...selectedUsers}));
+    prevTeam=JSON.parse(window.localStorage.getItem('prevTeam'));
+    setInTeam({...prevTeam, ...selectedUsers});
   }
   const sgstns=(data)=>{
     return(

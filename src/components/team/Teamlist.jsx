@@ -10,18 +10,17 @@ const Teamlist = () => {
   })
   useEffect(()=>{
     localStorage.setItem('inTeam', JSON.stringify(team));
+    window.localStorage.setItem('prevTeam', JSON.stringify(team));
     
   },[team])
   var data={...team};
   const del=(val)=>{
     delete data[val.id];
     setTeam(data);
-    window.dispatchEvent(new Event('storage_from_teamlist'));
   }
   return (
     <div className='container team__list'>
       {Object.values(team).map((val, key)=>{
-        console.log(val);
         return(
           <div key={key} id={val.id} className='added_users'>
           <div><Teamuser val={val}/></div>
