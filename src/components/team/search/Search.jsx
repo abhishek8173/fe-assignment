@@ -10,6 +10,7 @@ const Search = (props) => {
   const [selectedUsers, setSelectedUsers] = useState({});
   window.addEventListener('storage_from_teamlist', ()=>{
     setInTeam(JSON.parse(window.localStorage.getItem('inTeam')));
+
   })
   useEffect(()=>{
     const selectedUsers=JSON.parse(localStorage.getItem('selectedUsers'));
@@ -19,7 +20,6 @@ const Search = (props) => {
   },[]);
   useEffect(()=>{
     localStorage.setItem('selectedUsers', JSON.stringify(selectedUsers));
-    console.log('1');
   }, [selectedUsers]);
   useEffect(()=>{
     localStorage.setItem('inTeam', JSON.stringify(inTeam));

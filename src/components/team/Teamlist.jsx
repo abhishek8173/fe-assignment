@@ -10,6 +10,7 @@ const Teamlist = () => {
   })
   useEffect(()=>{
     localStorage.setItem('inTeam', JSON.stringify(team));
+    
   },[team])
   var data={...team};
   const del=(val)=>{

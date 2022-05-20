@@ -3,7 +3,7 @@
 .team__container{
     height: 40rem;
     background: var(--color-white);
-    margin-top: 1.5rem;
+    margin-top: 2%;
     border-radius: 0.7rem;
     box-shadow: 0 0 1rem var(--color-bg-variant);
 }
@@ -45,7 +45,7 @@
 }
 
 .sgstns__container{
-    width: 83%;
+    width: 85%;
     height: 45%;
     margin-top: 0.25rem;
     position: absolute;
